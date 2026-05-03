@@ -14,7 +14,7 @@ const html = `<!DOCTYPE html>
 
   body {
     font-family: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho', 'MS Mincho', serif;
-    background: #f9f5ed;
+    background: #ffffff;
     color: #2c1a0e;
     font-size: 13pt;
     line-height: 1.9;
@@ -24,7 +24,7 @@ const html = `<!DOCTYPE html>
     width: 210mm;
     height: 297mm;
     padding: 18mm 20mm 16mm 20mm;
-    background: #f9f5ed;
+    background: #ffffff;
     page-break-after: always;
     page-break-inside: avoid;
     position: relative;
@@ -99,7 +99,7 @@ const html = `<!DOCTYPE html>
   .deadline-date {
     font-size: 22pt;
     font-weight: 700;
-    color: #f9f5ed;
+    color: #ffffff;
     letter-spacing: 0.05em;
     margin-top: 1mm;
   }
@@ -183,7 +183,7 @@ const html = `<!DOCTYPE html>
 
   .section-header {
     background: #5c3a1e;
-    color: #f9f5ed;
+    color: #ffffff;
     padding: 4mm 6mm;
     border-radius: 3px;
     margin-bottom: 6mm;
