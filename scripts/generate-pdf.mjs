@@ -315,12 +315,19 @@ const html = `<!DOCTYPE html>
         <div class="info-value"></div>
       </div>
 
-      <div class="info-row">
-        <div class="info-label">お生まれの年</div>
-        <div class="info-value" style="display:flex; align-items:baseline; gap:2mm;">
-          <span style="font-size:13pt; color:#5c3a1e; font-family:'Noto Sans JP',sans-serif;">昭和</span>
-          <span style="flex:1; border-bottom:1.5px solid #d4bc96; min-height:6mm;"></span>
-          <span style="font-size:13pt; color:#5c3a1e; font-family:'Noto Sans JP',sans-serif;">年生まれ</span>
+      <div class="info-row" style="align-items:flex-start; padding-top:2mm;">
+        <div class="info-label" style="padding-top:2mm;">お生まれの年</div>
+        <div class="info-value" style="display:flex; flex-direction:column; gap:3mm;">
+          <div style="display:flex; align-items:baseline; gap:2mm;">
+            <span style="font-size:12pt; color:#5c3a1e; font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif; white-space:nowrap;">昭和</span>
+            <span style="width:28mm; border-bottom:1.5px solid #d4bc96; min-height:6mm; display:inline-block;"></span>
+            <span style="font-size:12pt; color:#5c3a1e; font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif; white-space:nowrap;">年</span>
+          </div>
+          <div style="display:flex; align-items:baseline; gap:2mm;">
+            <span style="font-size:12pt; color:#5c3a1e; font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif; white-space:nowrap;">西暦</span>
+            <span style="width:28mm; border-bottom:1.5px solid #d4bc96; min-height:6mm; display:inline-block;"></span>
+            <span style="font-size:12pt; color:#5c3a1e; font-family:'Hiragino Sans','Hiragino Kaku Gothic ProN',sans-serif; white-space:nowrap;">年生まれ</span>
+          </div>
         </div>
       </div>
 
