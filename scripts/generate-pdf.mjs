@@ -380,7 +380,7 @@ const html = `<!DOCTYPE html>
 
   <div class="section-header">
     <div class="section-number">テーマ 2</div>
-    <div class="section-title">社会や暮らしの変化で、自分に大きな影響があったこと</div>
+    <div class="section-title">社会や自分に大きな影響を与えた社会的な出来事・変化</div>
   </div>
 
   <div class="section-question">
@@ -414,7 +414,7 @@ const html = `<!DOCTYPE html>
 
   <div class="section-header">
     <div class="section-number">テーマ 3</div>
-    <div class="section-title">印象深く覚えているニュース・出来事・事件・イベント</div>
+    <div class="section-title">印象深く覚えている社会的な出来事・イベント・事件</div>
   </div>
 
   <div class="section-question">
