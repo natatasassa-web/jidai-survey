@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: oklch(97% 0.008 80);
+  --bg-warm: oklch(94.5% 0.012 80);
+  --bg-notice: oklch(93% 0.015 78);
+  --brown-deep: oklch(28% 0.055 50);
+  --brown-mid: oklch(42% 0.07 50);
+  --brown-light: oklch(58% 0.07 55);
+  --gold: oklch(66% 0.1 75);
+  --gold-light: oklch(82% 0.07 82);
+  --text: oklch(20% 0.015 50);
+  --text-muted: oklch(50% 0.04 55);
+  --border: oklch(85% 0.02 78);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--bg);
+  color: var(--text);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho',
+    'Noto Serif JP', Georgia, serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
 }
