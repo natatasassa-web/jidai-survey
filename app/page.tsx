@@ -22,7 +22,10 @@ const themes = [
       "便利になってよかったと思うことは何ですか？",
       "便利になった一方で、失われたと思うことはありますか？",
       "進学、就職、結婚、子育て、住む場所など、自分の人生の選択に影響した社会の変化はありますか？",
-      "自分の親世代と自分の世代で、「考え方が違うな」と感じたことはありますか？",
+      "景気、物価、働き方、教育、地域の様子などで、時代の変化を感じたことはありますか？",
+      "今の若い人たちと自分の世代で、「ここが一番違う」と思うことはありますか？",
+      "当時の学校や職場には、今とは違う「当たり前」はありましたか？",
+      "その中で、今考えると大きく変わったなと思うことはありますか？",
     ],
   },
   {
@@ -37,6 +40,16 @@ const themes = [
       "今ふり返って、その出来事はどんな意味があったと思いますか？",
     ],
     hint: "大きなニュースや事件、自然災害、オリンピックや万博などのイベント、有名人、映画、音楽、流行など",
+    hintItems: [
+      "法律や制度の変化",
+      "景気や物価に関する出来事",
+      "テレビで何度も見た映像",
+      "学校や職場でみんなが話題にしていたこと",
+    ],
+    extraSubs: [
+      "若い頃に「これは新しい」「これはかっこいい」と感じた音楽・映画・俳優・流行はありますか？",
+      "今見ると時代を感じるけれど、当時は印象に残っていたものはありますか？",
+    ],
   },
   {
     num: "4",
@@ -359,9 +372,43 @@ export default function Home() {
                         lineHeight: 1.8,
                       }}
                     >
-                      <span style={{ fontWeight: 500, color: "var(--brown-light)" }}>ヒント：</span>
-                      {(theme as typeof theme & { hint: string }).hint}
+                      <p style={{ marginBottom: "6px" }}>
+                        <span style={{ fontWeight: 500, color: "var(--brown-light)" }}>ヒント：</span>
+                        {(theme as typeof theme & { hint: string }).hint}
+                      </p>
+                      {"hintItems" in theme && (
+                        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                          {(theme as typeof theme & { hintItems: string[] }).hintItems.map((item, i) => (
+                            <li key={i} style={{ display: "flex", gap: "8px" }}>
+                              <span style={{ color: "var(--gold)", flexShrink: 0 }}>・</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
+                  )}
+                  {"extraSubs" in theme && (
+                    <ul style={{ listStyle: "none", padding: 0, margin: "12px 0 0", display: "flex", flexDirection: "column", gap: "10px" }}>
+                      {(theme as typeof theme & { extraSubs: string[] }).extraSubs.map((q, i) => (
+                        <li
+                          key={i}
+                          style={{
+                            display: "flex",
+                            gap: "10px",
+                            alignItems: "flex-start",
+                            fontSize: "clamp(15px, 3.8vw, 17px)",
+                            lineHeight: 1.85,
+                            color: "var(--text)",
+                            fontFamily: sans,
+                            fontWeight: 300,
+                          }}
+                        >
+                          <span style={{ color: "var(--gold)", flexShrink: 0, marginTop: "2px" }}>・</span>
+                          <span>{q}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </div>
               </div>
