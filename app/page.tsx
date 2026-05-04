@@ -225,7 +225,7 @@ export default function Home() {
         </section>
 
         {/* ── PDF Download (secondary) ────────────── */}
-        <section style={{ marginBottom: "48px", marginTop: "12px" }}>
+        <section style={{ marginBottom: "48px", marginTop: "32px" }}>
           <a
             href="/kaito-sheet.pdf"
             download="回答シート.pdf"
