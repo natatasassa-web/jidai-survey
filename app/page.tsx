@@ -128,7 +128,7 @@ export default function Home() {
               fontWeight: 300,
             }}
           >
-            回答シートを印刷して、思い出したことを自由にお書きください。全部答えなくても大丈夫です。
+            下のフォームに思い出したことを自由にお書きください。全部答えなくても大丈夫です。印刷して手書きで回答したい方は、PDFもご用意しています。
           </p>
         </section>
 
@@ -183,11 +183,12 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── Main Download Button ────────────────── */}
-        <section style={{ marginBottom: "48px" }}>
+        {/* ── Google Form Button (primary) ───────── */}
+        <section style={{ marginBottom: "16px" }}>
           <a
-            href="/kaito-sheet.pdf"
-            download="回答シート.pdf"
+            href="https://forms.gle/W9zbN33PiAkxPZ6K8"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               display: "flex",
               alignItems: "center",
@@ -206,20 +207,60 @@ export default function Home() {
               textAlign: "center",
             }}
           >
-            <span style={{ fontSize: "1.2em" }}>↓</span>
-            <span>回答シートをダウンロード</span>
+            <span>回答フォームを開く</span>
           </a>
           <p
             style={{
               textAlign: "center",
               marginTop: "10px",
-              fontSize: "13px",
+              fontSize: "clamp(14px, 3.5vw, 16px)",
+              color: "var(--text-muted)",
+              fontFamily: sans,
+              fontWeight: 300,
+              lineHeight: 1.8,
+            }}
+          >
+            こちらのフォームにご記入いただくと、そのままオンラインで提出できます。
+          </p>
+        </section>
+
+        {/* ── PDF Download (secondary) ────────────── */}
+        <section style={{ marginBottom: "48px" }}>
+          <a
+            href="/kaito-sheet.pdf"
+            download="回答シート.pdf"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+              width: "100%",
+              padding: "14px 20px",
+              border: "1.5px solid var(--border)",
+              borderRadius: "8px",
+              color: "var(--brown-mid)",
+              fontSize: "clamp(14px, 3.8vw, 16px)",
+              fontWeight: 500,
+              textDecoration: "none",
+              letterSpacing: "0.04em",
+              background: "transparent",
+              textAlign: "center",
+            }}
+          >
+            <span>↓</span>
+            <span>印刷用PDFをダウンロード</span>
+          </a>
+          <p
+            style={{
+              textAlign: "center",
+              marginTop: "8px",
+              fontSize: "12px",
               color: "var(--text-muted)",
               fontFamily: sans,
               fontWeight: 300,
             }}
           >
-            PDFファイルが開きます。印刷してお使いください。
+            手書きで回答したい方はこちら
           </p>
         </section>
 
